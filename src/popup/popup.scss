@@ -10,6 +10,23 @@
 	font-weight: 400;
 }
 
+$primary-color: color(#f4f4f4) !default;
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+@if not $primary-color-light {
+$primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+$primary-color-dark: darken($primary-color, 15%);
+}
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+
+$link-color: color("light-blue", "darken-1") !default;
+
+
+
 
 * {box-sizing: border-box;	font-family: 'Roboto', sans-serif;}
 i {vertical-align: middle}
@@ -150,24 +167,4 @@ button:active {
 
 .options-section.left {
 	transform: translate(0,0);
-}
-.input-field {
-	width: 100%;
-	margin: 5px auto;
-	padding: 4px 6px;
-	outline: 0;
-	border: 0;
-	border-bottom: 2px solid #f3f3f3;
-	transition: border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.input-field:focus {
-	border-color: #D32F2F;
-}
-
-.comment-field {
-	display: inline-block;
-	width: 60%;
-	margin: 0 auto;
-
 }

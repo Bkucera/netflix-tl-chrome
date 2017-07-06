@@ -1,16 +1,21 @@
-<div>
+<div class="main-page">
     <div class="top-bar">
         <button class="icon-btn options-btn">
             <i class="material-icons">settings</i>
         </button>
         <div class="comment-field">
-        <input id="input-field"
-                class="input-field"
+            <div class="input-field">
+            <input id="comment-input"
+                class="comment-input"
                 type = 'text'
                 maxlength='140'
                 placeholder="insightful comment"
-                autofocus/>
-        <span class="char-label" id="char-label">0/140</span>
+                autofocus>
+            <label for="comment-input" class="active">Comment</label>
+        <span class="char-label">0/140</span>
+
+            </div>
+        
         </div>
         <button class="submit-btn">
             <i class="material-icons">send</i>
@@ -18,6 +23,6 @@
     </div>
 
     <div class="btn-bar">
-    </div>
     <button class="text-btn logout-btn">Logout</button>
+    </div>
 </div>
